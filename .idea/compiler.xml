@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="PE3" />
+        <module name="exercise3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="exercise3" target="11" />
       <module name="PE3" target="11" />
     </bytecodeTargetLevel>
   </component>

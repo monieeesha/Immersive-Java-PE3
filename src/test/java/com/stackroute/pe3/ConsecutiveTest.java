@@ -45,54 +45,34 @@ public class ConsecutiveTest {
         System.out.println("Inside After");
 
     }
-
+   /*if a given array donot contain consecutive numbers*/
     @Test
-    public void  ChecknonConsecutive()
+    public void  check_NonConsecutiveRepeatedElement_ReturnNonConsecutive()
     {
-
-        String input="6,6,6,6,6,6";
-
-        String result=con.Checkcons(input);
-
         //assert
-        assertEquals("nonconsecutive",result);
+        assertEquals("nonconsecutive",con.Checkcons("6,6,6,6,6,6"));
     }
-
+    /*check wheather the given array contains consecutive numbers whwn the given array contain negative numbers*/
     @Test
-    public void  ChecknegativeCons()
+    public void  check_NegativeCons_ReturnConsecutive()
     {
-
-        String input="0,-1,-2,-3,-4,-5";
-
-        String result=con.Checkcons(input);
-
         //assert
-        assertEquals("consecutive",result);
+        assertEquals("consecutive",con.Checkcons("0,-1,-2,-3,-4,-5"));
     }
-
-
+    /*if a given array donot consecutive numbers*/
 
     @Test
-    public void  Checkconsecutivenine()
+    public void  checkc_Nonsecutivenine_ReturnNonConsecutive()
     {
-
-        String input="98,96,95,94,93";
-
-        String result=con.Checkcons(input);
-
         //assert
-        assertEquals("nonconsecutive",result);
+        assertEquals("nonconsecutive",con.Checkcons("98,97,96,95,92,93"));
     }
     @Test
-    public void  Checkconsecutivefive()
+    public void  check_Consecutivefive_ReturnConsecutive()
     {
 
-        String input="54,53,52,51,50,49,48";
-
-        String result=con.Checkcons(input);
-
         //assert
-        assertEquals("consecutive",result);
+        assertEquals("consecutive",con.Checkcons("54,53,52,51,50,49,48"));
     }
 
 

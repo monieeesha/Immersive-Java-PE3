@@ -2,9 +2,9 @@ package com.stackroute.pe3;
 
 import java.util.Scanner;
 
-public class FirstProgram {
+public class CheckPrimeEvenReverse {
 
-
+    /*Traverse the array check for Even and Odd nyumbers*/
     public static String[] IsEvenOdd(int[] input) {
 
         int size=input[0];
@@ -18,8 +18,8 @@ public class FirstProgram {
                 output[j] = "Even";
                 j++;
 
-            } else
-                {
+            }
+            else {
 
                output[j] = "Odd";
                j++;
@@ -27,19 +27,18 @@ public class FirstProgram {
             }
 
         }
-            return output;
+
+        return output;
         }
 
-
+    /*Traverse the array Remove all prime number*/
     public static int[] RemovePrime(int[] input) {
-
         int size=input[0];
         int[] output=new int[size];
         int i=0,j=0,k=0,m=0;
         boolean flag = false;
         for ( i = 1; i<=size; i++)
         {
-
             m = input[i];
             for ( j = 2; j < m / 2; j++)
             {
@@ -51,8 +50,6 @@ public class FirstProgram {
 
                 }
             }
-
-
             if (flag)
             {
                 output[k] = m;
@@ -68,7 +65,7 @@ public class FirstProgram {
         return output1;
     }
 
-
+    /*Traverse the array and Reverse the given array*/
     public static int[] ReverseArr(int[] input) {
 
         int size=input[0];

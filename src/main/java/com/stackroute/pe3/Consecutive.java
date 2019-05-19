@@ -2,29 +2,13 @@ package com.stackroute.pe3;
 import java.util.*;
 
 public class Consecutive {
-
-
-    public static void main(String args[])
-    {
-
-        Scanner scan=new Scanner(System.in);
-        String string=scan.next();
-
-
-
-
-         String  result= Checkcons(string);
-         System.out.println(result);
-
-
-    }
-
+    /*check wheather the given array contains consecutive numbers*/
     public  static String Checkcons(String string)
     {
 
-          String  word[] = string.split(",");
-         int k=0;
-         boolean result=true;
+        String  word[] = string.split(",");
+        int k=0;
+        boolean result=true;
         int a[]=new int[word.length];
         for(String str:word) {
 
@@ -40,7 +24,7 @@ public class Consecutive {
                 continue;
             }
 
-                else
+             else
              {
 
              result=false;

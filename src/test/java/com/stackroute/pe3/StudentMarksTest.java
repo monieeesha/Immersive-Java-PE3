@@ -45,43 +45,12 @@ public class StudentMarksTest {
         System.out.println("Inside After");
 
     }
-
+    /*check the grade and display appropriate message*/
     @Test
-    public void  CheckForGreater()
-    {
-
-
-
-        String result=sm.CheckRange(112);
+    public void  check_GivenGradeArray_ReturmMessage() {
 
         //assert
-        assertEquals("input should be less than 100",result);
+        assertArrayEquals(new String[]{"input should be greater than 0", "input should be less than 100", "true"}, sm.CheckRange(new int[]{-1, 112, 85}));
+
     }
-
-    @Test
-    public void  CheckForNegative()
-    {
-
-
-
-        String result=sm.CheckRange(-1);
-
-        //assert
-        assertEquals("input should be greater than 0",result);
-    }
-
-
-
-    @Test
-    public void  CheckForActual()
-    {
-
-
-
-        String result=sm.CheckRange(10);
-
-        //assert
-        assertEquals("true",result);
-    }
-
 }

@@ -2,18 +2,16 @@ package com.stackroute.pe3;
 
 import java.util.Scanner;
 
-public class SecondProgram {
+public class CompareAppendPrepend {
+    /*conmpare the two given array check wheather eqaula oer notequal*/
     public static  String[]  CompareArray(String s1[],String s2[]) {
          String output[]=new  String[s1.length];
                 int j=0;
               for (int i = 0; i < s1.length; i++)
               {
-
-
-                      if (s1[i].equals(s2[i]))
+                  if (s1[i].equals(s2[i]))
                       {
-
-                           output[j] = "equal";
+                          output[j] = "equal";
                            j++;
                       }
                       else
@@ -25,9 +23,9 @@ public class SecondProgram {
 
               }
 
-
-         return   output;
+              return   output;
       }
+    /*append the first element of array1 to the end of array2*/
     public static String[] AppendLast(String s1[], String s2[])
     {
 
@@ -42,7 +40,7 @@ public class SecondProgram {
         return output;
 
     }
-
+    /*prepend the mid element of array2 to array1*/
     public static String[] PrependFirst(String s1[], String s2[]) {
 
         int start = 0;
@@ -66,7 +64,7 @@ public class SecondProgram {
         return output;
 
     }
-
+    /*remove the repeated elements in an array*/
     public static String[] RemoveDuplicate(String[] array1) {
         int i = 0, j = 0;
         String[] output = new String[array1.length];

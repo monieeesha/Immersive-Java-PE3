@@ -1,8 +1,10 @@
 package com.stackroute.pe3;
 
+/*generate the appropriate exceptions*/
 public class ArrayExceptions {
 
-    public String stringArrayTraverse(String[] array) {
+    public String stringArrayTraverse(String[] array)
+    {
         try {
             int size = Integer.parseInt(array[0]);
             String[] strings = new String[size];
@@ -13,16 +15,19 @@ public class ArrayExceptions {
                 index++;
             }
         }
-        catch (NullPointerException ne) {
+        catch (NullPointerException ne)
+        {
             return "Caught NullPointerException";
 
-        } catch (NegativeArraySizeException negSize) {
+        } catch (NegativeArraySizeException negSize)
+        {
             return "Caught NegativeArraySizeException";
 
-        } catch (ArrayIndexOutOfBoundsException arrayIndex) {
+        } catch (ArrayIndexOutOfBoundsException arrayIndex)
+        {
             return "Caught ArrayIndexOutOfBoundsException";
         }
 
-        return "Returned Successfully!";
+            return "Returned Successfully!";
     }
 }

@@ -41,22 +41,37 @@ public class RemoveVowelsTest {
     {
         //arrange
         rv=null;
-
         System.out.println("Inside After");
 
     }
 
     @Test
-    public void Vowels()
+    public void remove_GivenArray_ArrayWithConsonants() {
+        assertArrayEquals(new String[]{"hll", "h", "by", "sm", "txt"}, rv.ReadString(new String[]{"5", "hello", "hi", "bye", "some", "text"}));
+
+    }
+    @Test
+    public void remove_GivenArrayWithOneVowel_EmptyArray()
     {
-        assertArrayEquals(new String[]{"hll","h","by","sm","txt"}, rv.ReadString(new String[]{"5", "hello", "hi", "bye", "some", "text"}));
+
         assertArrayEquals(new String[]{""}, rv.ReadString(new String[]{"1","a"}));
+
+    }
+    @Test
+    public void remove_GivenArrayWithOnlyVowels_EmptyArray()
+    {
+
         assertArrayEquals(new String[]{"",""}, rv.ReadString(new String[]{"2", "aeiou", "ae"}));
     }
     @Test
-    public void check()
+    public void check_GivenArrayWithDigit_Array()
     {
-        assertArrayEquals(new String[]{"String should contain only letter","h","String should contain only letter","sm","txt"}, rv.ReadString(new String[]{"5", "h55lo", "hi", "b0e", "some", "text"}));
+        assertArrayEquals(new String[]{"String should contain only letter", "h", "String should contain only letter", "sm", "txt"}, rv.ReadString(new String[]{"5", "h55lo", "hi", "b0e", "some", "text"}));
+    }
+    @Test
+    public void check_GivenArrayWithNull_Array()
+    {
+
         assertArrayEquals(new String[]{"Strings cannot be null","h","String should contain only letter","Strings cannot be null","txt"}, rv.ReadString(new String[]{"5", "", "hi", "b0e", "", "text"}));
     }
 
